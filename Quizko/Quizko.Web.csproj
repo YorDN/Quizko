@@ -17,4 +17,12 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Quizko.Common\Quizko.Common.csproj" />
+    <ProjectReference Include="..\Quizko.Data.Models\Quizko.Data.Models.csproj" />
+    <ProjectReference Include="..\Quizko.Data\Quizko.Data.csproj" />
+    <ProjectReference Include="..\Quizko.Services.Core\Quizko.Services.Core.csproj" />
+    <ProjectReference Include="..\Quizko.ViewModels\Quizko.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>

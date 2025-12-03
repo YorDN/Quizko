@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Quizko.Common\Quizko.Common.csproj" />
+    <ProjectReference Include="..\Quizko.Data\Quizko.Data.csproj" />
+    <ProjectReference Include="..\Quizko.ViewModels\Quizko.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>

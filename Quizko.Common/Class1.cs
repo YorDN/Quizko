@@ -1,4 +1,4 @@
-﻿namespace Quizko.Data.Models
+﻿namespace Quizko.Common
 {
     public class Class1
     {

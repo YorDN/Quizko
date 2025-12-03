@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quizko.Data", "Quizko.Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quizko.Data.Models", "Quizko.Data.Models\Quizko.Data.Models.csproj", "{AC39A34B-4FAD-411B-B6AB-689223A0DCF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quizko.Common", "Quizko.Common\Quizko.Common.csproj", "{4E2D2C78-A2F1-4020-AA12-07D67C2AF014}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{AC39A34B-4FAD-411B-B6AB-689223A0DCF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC39A34B-4FAD-411B-B6AB-689223A0DCF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC39A34B-4FAD-411B-B6AB-689223A0DCF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E2D2C78-A2F1-4020-AA12-07D67C2AF014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2D2C78-A2F1-4020-AA12-07D67C2AF014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2D2C78-A2F1-4020-AA12-07D67C2AF014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2D2C78-A2F1-4020-AA12-07D67C2AF014}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
