@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+
 using Quizko.Data.Models.Enumerations;
 
 using System.ComponentModel.DataAnnotations;
@@ -11,7 +12,8 @@ namespace Quizko.Data.Models.Quizes
         public Guid Id { get; set; } = Guid.NewGuid();
         
         [Required]
-        public string Title { get; set; }
+        [Comment("The qustion title/content")]
+        public required string Title { get; set; }
 
         [Required]
         public Guid TestId { get; set; }
@@ -19,6 +21,7 @@ namespace Quizko.Data.Models.Quizes
         [ForeignKey(nameof(TestId))]
         public Test Test { get; set; } = null!;
 
+        [Comment("The difficulty of the question (default: medium)")]
         public Difficulty Difficulty { get; set; } = Difficulty.Medium;
 
         [Required]
@@ -28,13 +31,18 @@ namespace Quizko.Data.Models.Quizes
         public uint Time { get; set; }
 
         [Required]
+        [Comment("The subject/cathegory of the question")]
         public Subject Subject { get; set; } = null!;
 
         [Required]
+        [Comment("The question type")]
         public QuestionType Type { get; set; }
 
-        [Required]
-        public required string Image { get; set; }
+        [Comment("Image of the question")]
+        public string? Image { get; set; }
+
+        [Comment("How many points the question gives the user if right")]
+        public byte? Points { get; set; }
 
         public ICollection<Answer> Answers { get; set; } = new List<Answer>();
     }
