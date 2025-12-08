@@ -12,4 +12,8 @@
     <ProjectReference Include="..\Quizko.ViewModels\Quizko.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+  </ItemGroup>
+
 </Project>

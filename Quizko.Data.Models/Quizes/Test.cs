@@ -33,7 +33,7 @@ namespace Quizko.Data.Models.Quizes
 
         public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
 
-        public ICollection<TestCathegory> Cathegories { get; set; } = new List<TestCathegory>();
+        public ICollection<TestCategory> Categories { get; set; } = new List<TestCategory>();
         public ICollection<Question> Questions { get; set; } = new List<Question>();
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
 
