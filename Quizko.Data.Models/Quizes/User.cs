@@ -33,7 +33,7 @@ namespace Quizko.Data.Models.Quizes
         public ICollection<Test> TestsWritten { get; set; } = new List<Test>();
         
         // A collection of the tests that the user has taken
-        public ICollection<Test> TestsTaken { get; set; } = new List<Test>();
+        public ICollection<TestAttempt> TestsTaken { get; set; } = new List<TestAttempt>();
 
         // A collection of the reviews that the user has written
         public ICollection<Review> Reviews { get; set; } = new List<Review>();

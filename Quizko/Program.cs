@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Quizko.Data;
+using Quizko.Data.Models.Quizes;
 
 namespace Quizko;
 
@@ -15,10 +16,23 @@ public class Program
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(connectionString));
         builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+        builder.Services.AddScoped<HttpClient>();
+        builder.Services.AddIdentity<User, IdentityRole<Guid>>(options =>
+        {
+            options.SignIn.RequireConfirmedAccount = false;
+            options.Password.RequireNonAlphanumeric = false;
+            options.Password.RequireDigit = true;
+            options.Password.RequiredLength = 8;
+        })
+                .AddDefaultUI()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
 
-        builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+
         builder.Services.AddControllersWithViews();
+        builder.Services.AddRazorPages();
 
         var app = builder.Build();
 
@@ -38,7 +52,7 @@ public class Program
         app.UseStaticFiles();
 
         app.UseRouting();
-
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapControllerRoute(

@@ -6,7 +6,7 @@ namespace Quizko.Data.Models.Quizes
     public class Subject
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required] 
         [MaxLength(100)]

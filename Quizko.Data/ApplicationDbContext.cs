@@ -27,9 +27,10 @@ public class ApplicationDbContext : IdentityDbContext<
     public DbSet<Subject> Subjects { get; set; } = null!;
     public DbSet<TestCategory> TestCategories { get; set; } = null!;
 
-    //protected override void OnModelCreating(ModelBuilder builder)
-    //{
-    //    base.OnModelCreating(builder);
-    //}
+    public DbSet<TestAttempt> TestAttempts { get; set; } = null!;
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+    }
 
 }
